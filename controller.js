@@ -23,13 +23,15 @@ function Controller(model) {
 	// Feed the pet at index `index`
 	this.feedPet = function(index) {
 		var pet = this.getPetByIndex(index);
-		pet.hunger += 10; // maybe write pet.feed(10)?
+		pet.hunger -= 10; // maybe write pet.feed(10)?
+		pet.boredom += 5;
 	}
 
 	// Reduce the boredom of the pet at index `index`
 	this.playWithPet = function(index) {
 		var pet = this.getPetByIndex(index);
-		pet.boredom += 10; // maybe write pet.play(10)?
+		pet.boredom -= 10; // maybe write pet.play(10)?
+		pet.hunger += 5; 
 	}
 
 

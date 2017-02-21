@@ -61,6 +61,7 @@ function View(controller, output) {
 		this.controller.addPet($('#name').val(),$('#species').val());
 		$('#name').val("");
 		$('#species').val("");
+		$('#output').html("")
 		this.drawAllPets()
 	}.bind(this));	
 		//container.append(playButton);
